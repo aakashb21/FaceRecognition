@@ -1,0 +1,61 @@
+<div class="container">
+  <h1>Welcome to Bits&Bytes Bank</h1>
+  <p>The World is full of Bits and Bytes !!!</p>
+
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.3)" size="medium" color="#fff" type="timer" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+
+
+  <div class="row">
+    <div class="col-md-6" style="background-color:lavender; height: 250px;">
+
+      <div style="text-align:center; padding-top: 5%"><b>Password Authentication</b></div> <br />
+
+      <label for="username">Username : </label>
+      <input type="text" name="" id="" value="Enter Your Username " /> <br /><br />
+
+      <label for="username"> Password : </label>
+      <input type="text" name="" id="" value="Enter Your Password " /><br /><br />
+
+      <div class="row" style="padding-left: 20%;">
+        <button style="margin:5px;">Enter </button>
+        <button style="margin:5px;">Reset </button>
+      </div>
+
+    </div>
+
+    <div class="col-md-6" style="background-color:rgb(245, 200, 118); text-align:center; padding-top: 3%">
+      <b>Face Authentication</b>
+      <div>
+        <p>A modernised way for authenticating into system. All you have to do is stand in front of camera click on
+          "Authenticate" button.</p><br />
+        <p>You would be entered into system, if your are a valid customer of ours </p>
+      </div>
+
+      <button (click)="toggleWebcam()">Authenticate</button>
+      <!-- <button (click)="triggerSnapshot()">Snapshot</button> -->
+    </div>
+
+
+    <div class="row">
+      <div style="padding-left: 45% ">
+        <webcam *ngIf="showWebcam" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+      </div>
+
+      <ngx-spinner bdColor="rgba(0, 0, 0, 0.3)" size="medium" color="#fff" type="timer" [fullScreen]="false">
+        <p style="color: white"> Loading... </p>
+      </ngx-spinner>
+
+      <!-- <div class="col-md-4" style="padding-left:10%;" >
+          <div class="snapshot" *ngIf="webcamImage">
+            <img [src]="webcamImage.imageAsDataUrl"/>
+          </div>
+        </div> -->
+    </div>
+
+
+  </div>
+
+</div>
+
