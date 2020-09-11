@@ -1,8 +1,8 @@
-<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
 
 
 
-<div class="container" style="border-style: outset; border: 5px solid black; border-radius: 15px; width: 500%; height: 65%;  ">
+<div class="container main-div">
   <h1>Welcome to Bits&Bytes Bank</h1>
   <p>The World is full of Bits and Bytes !!! </p>
 
@@ -10,9 +10,18 @@
     <p style="color: white"> Loading... </p>
   </ngx-spinner>
 
+  <hr style="border:1px solid black" />
 
-  <div class="row">
-    <div class="col-md-6" style="background-color:lavender; height: 250px;">
+  <div id="myModal" class="facemodal" *ngIf="isUnauthorised">
+    <div class="facemodal-content">
+      <span class="faceclose" (click)="close()">&times;</span>
+      <strong style="color:#9a3c3c;padding-left: 15px;">Error !! </strong>
+      <span style="color:#9a3c3c;margin-top: 7px;">User Not Authorized</span>
+    </div>
+  </div>
+
+  <div class="row" style="padding-left: 1%;">
+    <div class="col-md-6 box" style="height: 250px;">
 
       <div style="text-align:center; padding-top: 5%"><b>Password Authentication</b></div> <br />
 
@@ -22,23 +31,23 @@
       <label for="username"> Password : </label>
       <input type="text" name="" id="" value="Enter Your Password " class="form-control" /><br /><br /> -->
 
-      <div class="input-group col-xs-8">
+      <div class="input-group col-xs-11" style="z-index: 0;">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <input id="email" type="text" class="form-control" name="email" placeholder="Email">
       </div>
-      <div class="input-group col-xs-8">
+      <div class="input-group col-xs-11" style="z-index: 0;">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
         <input id="password" type="password" class="form-control" name="password" placeholder="Password">
       </div>
 
-      <div class="row" style="padding-left: 30%;">
-        <button class="btn btn-primary" style="margin:5px;">Enter </button>
+      <div class="row" style="padding-left: 20%; ">
+        <button class="btn btn-primary" style="margin:5px; ">Enter </button>
         <button class="btn btn-warning" style="margin:5px;">Reset </button>
       </div>
 
     </div>
 
-    <div class="col-md-6" style="background-color:rgb(245, 200, 118); text-align:center; padding-top: 3%">
+    <div class="col-md-6 box" style="text-align:center; padding-top: 3%;">
       <b>Face Authentication</b>
       <div>
         <p>A modernised way for authenticating into system. All you have to do is stand in front of camera click on
@@ -52,7 +61,7 @@
 
 
     <div class="row">
-      <div style="padding-left: 45% ">
+      <div style="right: 470px; top: 100px; position: absolute; ">
         <webcam *ngIf="showWebcam" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
       </div>
 
@@ -68,11 +77,11 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" style="z-index: 0;">
     <form action="/action_page.php">
       <div>
         <h2 style="text-align:center">Share with us on Social Media</h2>
-        <div class="col" style="margin-left: 430px;">
+        <div class="col">
           <a href="#" class="fb btn">
             <i class="fa fa-facebook fa-fw"></i>
           </a>
@@ -87,6 +96,6 @@
     </form>
   </div>
 
-  <!-- "outputPath": "dist/ui-face-recog", -->
+  <!-- -->
 
 </div>

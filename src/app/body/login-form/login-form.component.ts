@@ -20,6 +20,7 @@ import { RouterModule, Router } from '@angular/router';
 export class LoginFormComponent implements OnInit {
 
   showWebcam = false;
+  isUnauthorised:boolean=false;
 
   private trigger: Subject<void> = new Subject<void>();
   public webcamImage: WebcamImage = null;
@@ -42,8 +43,14 @@ export class LoginFormComponent implements OnInit {
       /** spinner ends after 5 seconds */
       this.spinner.hide();   
       this.showWebcam = false;
-      this.rtr.navigate(['/userOne']);
-      //alert("User Not Authorized");
+      //this.rtr.navigate(['/userOne']);
+      //this.isUnauthorised=true;
+      if(this.isUnauthorised){
+        //here popup will be displayed
+        //alert("User Not Authorized");
+      }else{
+        this.rtr.navigate(['/userOne']);
+      }
     }, 5000);
 
     
@@ -62,5 +69,13 @@ triggerSnapshot()  {
   public get triggerObservable(): Observable<void> {
     return this.trigger.asObservable();
   }
+
+
+ 
+  close(){
+    this.isUnauthorised=false;
+  }
+
+      
 
 }

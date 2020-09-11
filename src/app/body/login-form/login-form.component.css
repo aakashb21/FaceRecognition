@@ -19,3 +19,66 @@
     text-shadow: 2px 2px 5px red;
     font-size: xx-large;
   }
+
+  .container {
+        width: 750px;
+  }
+
+  
+.facemodal {
+    display: block;
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .facemodal-content {
+    background-color: #f2dede;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid transparent;
+    width: 57%;
+    border-radius: 5px;
+  }
+  
+  /* The Close Button */
+  .faceclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .faceclose:hover,
+  .faceclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .box:hover{
+    /* background: rgba(182, 182, 247, 0.973);  */
+    background: grey; 
+    color: white;
+    border-radius: 2%;
+    box-shadow: 2px 2px 10px grey;
+    }
+
+    .main-div {
+        border: 3px solid black; 
+        border-radius: 15px; 
+         height: 70%; 
+         text-align: center; 
+         background-color: #8080801c; 
+         box-shadow: 20px 20px 10px grey;
+
+    }
+     

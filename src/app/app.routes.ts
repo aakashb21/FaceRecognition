@@ -4,6 +4,7 @@ import { UserOneProfileComponent } from './user-profiles/user-one-profile/user-o
 import { LoginFormComponent } from './body/login-form/login-form.component';
 
 export const appRoutes: Routes = [
+    {path: '', component: LoginFormComponent},
     {path: 'login', component: LoginFormComponent},
     {path: 'userOne', component: UserOneProfileComponent}
 
