@@ -1,6 +1,10 @@
-<div class="container">
+<br /><br /><br /><br /><br /><br />
+
+
+
+<div class="container" style="border-style: outset; border: 5px solid black; border-radius: 15px; width: 500%; height: 65%;  ">
   <h1>Welcome to Bits&Bytes Bank</h1>
-  <p>The World is full of Bits and Bytes !!!</p>
+  <p>The World is full of Bits and Bytes !!! </p>
 
   <ngx-spinner bdColor="rgba(0, 0, 0, 0.3)" size="medium" color="#fff" type="timer" [fullScreen]="true">
     <p style="color: white"> Loading... </p>
@@ -12,15 +16,24 @@
 
       <div style="text-align:center; padding-top: 5%"><b>Password Authentication</b></div> <br />
 
-      <label for="username">Username : </label>
+      <!-- <label for="username">Username : </label>
       <input type="text" name="" id="" value="Enter Your Username " /> <br /><br />
 
       <label for="username"> Password : </label>
-      <input type="text" name="" id="" value="Enter Your Password " /><br /><br />
+      <input type="text" name="" id="" value="Enter Your Password " class="form-control" /><br /><br /> -->
 
-      <div class="row" style="padding-left: 20%;">
-        <button style="margin:5px;">Enter </button>
-        <button style="margin:5px;">Reset </button>
+      <div class="input-group col-xs-8">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+      </div>
+      <div class="input-group col-xs-8">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+
+      <div class="row" style="padding-left: 30%;">
+        <button class="btn btn-primary" style="margin:5px;">Enter </button>
+        <button class="btn btn-warning" style="margin:5px;">Reset </button>
       </div>
 
     </div>
@@ -33,7 +46,7 @@
         <p>You would be entered into system, if your are a valid customer of ours </p>
       </div>
 
-      <button (click)="toggleWebcam()">Authenticate</button>
+      <button class="btn btn-primary" (click)="toggleWebcam()">Authenticate</button>
       <!-- <button (click)="triggerSnapshot()">Snapshot</button> -->
     </div>
 
@@ -53,9 +66,27 @@
           </div>
         </div> -->
     </div>
-
-
   </div>
 
-</div>
+  <div class="container">
+    <form action="/action_page.php">
+      <div>
+        <h2 style="text-align:center">Share with us on Social Media</h2>
+        <div class="col" style="margin-left: 430px;">
+          <a href="#" class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i>
+          </a>
+          <a href="#" class="twitter btn" style="margin-left: 50px;">
+            <i class="fa fa-twitter fa-fw"></i>
+          </a>
+          <a href="#" class="google btn" style="margin-left: 50px;"><i class="fa fa-google fa-fw">
+            </i>
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
 
+  <!-- "outputPath": "dist/ui-face-recog", -->
+
+</div>

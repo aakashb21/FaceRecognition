@@ -42,8 +42,8 @@ export class LoginFormComponent implements OnInit {
       /** spinner ends after 5 seconds */
       this.spinner.hide();   
       this.showWebcam = false;
-      //this.rtr.navigate(['/userOne']);
-      alert("User Not Authorized");
+      this.rtr.navigate(['/userOne']);
+      //alert("User Not Authorized");
     }, 5000);
 
     

@@ -1,0 +1,21 @@
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+
+  h1 {
+      padding-top: 20px;
+    text-shadow: 2px 2px 5px red;
+    font-size: xx-large;
+  }
